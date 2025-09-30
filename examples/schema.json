@@ -1,0 +1,30 @@
+{
+  "type": "object",
+  "required": ["service", "database"],
+  "properties": {
+    "service": {
+      "type": "object",
+      "required": ["host", "port"],
+      "properties": {
+        "host": {"type": "string"},
+        "port": {"type": "integer"}
+      }
+    },
+    "database": {
+      "type": "object",
+      "required": ["url"],
+      "properties": {
+        "url": {"type": "string"}
+      }
+    },
+    "features": {
+      "type": "object",
+      "properties": {
+        "flags": {
+          "type": "array",
+          "items": {"type": "string"}
+        }
+      }
+    }
+  }
+}

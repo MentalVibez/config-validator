@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "config-validator"
+version = "0.1.0"
+description = "Lightweight toolkit for validating configuration files across JSON, TOML, and INI formats."
+readme = "README.md"
+authors = [{ name = "Config Validator Authors" }]
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Quality Assurance",
+]
+dependencies = []
+
+[project.scripts]
+config-validator = "config_validator.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
